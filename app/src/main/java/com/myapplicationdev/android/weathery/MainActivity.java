@@ -22,6 +22,8 @@ import androidx.core.content.ContextCompat;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
+import org.jetbrains.annotations.NotNull;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         call.enqueue(new Callback<WeatherData>() {
             @SuppressLint("SetTextI18n")
             @Override
-            public void onResponse(Call<WeatherData> call, Response<WeatherData> response) {
+            public void onResponse(@NotNull Call<WeatherData> call, @NotNull Response<WeatherData> response) {
 
                 // °C
                 city.setText(response.body().getName() + " , " + response.body().getSys().getCountry());
@@ -150,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<WeatherData> call, Throwable t) {
+            public void onFailure(@NotNull Call<WeatherData> call, Throwable t) {
 
             }
         });
