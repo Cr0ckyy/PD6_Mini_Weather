@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="tvWeatherCity" type="id">test</item>
-    <item name="tvWeatherTemperature" type="id">test</item>
-    <item name="tvWeatherCondition" type="id">test</item>
-    <item name="tvWeatherHumidity" type="id">test</item>
-    <item name="tvWeatherMaxTemperature" type="id">test</item>
-    <item name="tvWeatherMinTemperature" type="id">test</item>
-    <item name="tvWeatherPressure" type="id">test</item>
-    <item name="tvWeatherWind" type="id">test</item>
-    <item name="tvWeatherImageView" type="id">test</item>
-    <item name="tvweatherSearchButton" type="id">test</item>
-    <item name="tvWeatherEditText" type="id">test</item>
+    <item name="tvWeatherCity" type="id"></item>
+    <item name="tvWeatherTemperature" type="id"></item>
+    <item name="tvWeatherCondition" type="id"></item>
+    <item name="tvWeatherHumidity" type="id"></item>
+    <item name="tvWeatherMaxTemperature" type="id"></item>
+    <item name="tvWeatherMinTemperature" type="id"></item>
+    <item name="tvWeatherPressure" type="id"></item>
+    <item name="tvWeatherWind" type="id"></item>
+    <item name="tvWeatherImageView" type="id"></item>
+    <item name="tvweatherSearchButton" type="id"></item>
+    <item name="tvWeatherEditText" type="id"></item>
 </resources>

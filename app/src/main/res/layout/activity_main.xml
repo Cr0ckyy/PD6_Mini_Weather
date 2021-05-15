@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,25 +8,23 @@
     android:layout_height="match_parent"
     android:background=" #4169e1 "
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".MainActivity">
 
-
+    <!-- City-->
     <TextView
         android:id="@+id/tvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
+        android:layout_margin="7dp"
         android:text="City"
         android:textColor="@color/white"
-        android:textSize="30dp" />
-
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="3dp"
         android:orientation="horizontal">
 
         <ImageView
@@ -37,7 +36,6 @@
             android:scaleType="fitXY"
             android:src="@drawable/sgweather" />
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +43,7 @@
             android:layout_marginLeft="10dp"
             android:orientation="vertical">
 
-
+            <!-- Temperature-->
             <TextView
                 android:id="@+id/tvTemperature"
                 android:layout_width="wrap_content"
@@ -53,22 +51,24 @@
                 android:layout_gravity="center"
                 android:orientation="vertical"
                 android:text="Temperature"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="50dp" />
+                android:textSize="50sp" />
 
+            <!-- Condition-->
             <TextView
                 android:id="@+id/tvCondition"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Condition"
+                android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="30dp" />
-
+                android:textSize="30sp" />
         </LinearLayout>
-
     </LinearLayout>
 
+    <!-- Detail-->
     <TextView
         android:id="@+id/tvDetail"
         android:layout_width="match_parent"
@@ -80,125 +80,178 @@
         android:orientation="vertical"
         android:text="Detail"
         android:textColor="@color/white"
-        android:textSize="30dp" />
+        android:textSize="30sp" />
 
+
+    <!--Humdity-->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="5dp"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="Humdity"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
-            <TextView
-                android:id="@+id/tvHumidity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Humidity"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/tvMaxTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Max Temperature"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/tvMinTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Min Temperature"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/tvPressure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Pressure"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
-
-            <TextView
-                android:id="@+id/tvWind"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="Humidity"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/tvHumdity"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text=":50%"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="stat"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
+    <!--Max Temp-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="stat"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="Max Temp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="stat"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
+        <TextView
+            android:id="@+id/tvMaxTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text=":50%"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="stat"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
+    <!--Min Temp-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="stat"
-                android:textColor="@color/white"
-                android:textSize="25dp" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="Min Temp"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvMinTemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text=":50%"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
 
+    <!--Pressure-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="Pressure"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tvPressure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text=":50%"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+    <!--Pressure-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="Wind"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/tvWind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text=":50%"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
@@ -208,16 +261,17 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:clickable="true"
+            android:contextClickable="true"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/pink"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_baseline_add_24"
-            tools:ignore="MissingConstraints,VectorDrawableCompat">
-
-
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            tools:ignore="VectorDrawableCompat" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>
+
